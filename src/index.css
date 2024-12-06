@@ -1,0 +1,697 @@
+@font-face {
+  font-family: 'Humanist 777'; /* Nama font yang akan digunakan */
+  src: url('./assets/fonts/Humanist-777.ttf') format('truetype'); /* Sesuaikan format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  background-image: url(/images/background.png);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  background-image: url(/images/background.png);
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* navbar */
+.header ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  position: relative;
+  justify-content: end;
+}
+
+.header img {
+  width: 300px;
+  margin: -8.5rem 2rem;
+  position: absolute;
+  justify-content: start;
+}
+
+.header ul li a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header ul li a:hover {
+  color: #0ca532;
+  border: none;
+}
+
+.header ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #0ca532;
+  transition: all 0.4s ease;
+}
+
+.header ul li a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Home */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.beranda {
+  max-width: 100%;
+  margin: 8rem  auto 0;
+  height: auto;
+  width: 100%;
+  background-color: #007bff;
+  position: relative;
+  overflow: hidden;
+}
+
+.beranda img{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.beranda h2 {
+  z-index: 2;
+  font-family: 'Humanist 777';
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  margin: 15rem 0 0;
+  text-align: center;
+  font-size: 5rem;
+  color: #fff;
+}
+
+.beranda a{
+  color: black;
+  text-decoration: none;
+  padding: 1rem 2rem;
+}
+
+.beranda .buttonBeranda {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  justify-content: center;
+  margin: 3rem auto 0;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #a0c0a8;
+  border-style: none;
+  border: 1.5px solid black;
+  transition: background-color 0.3s ease;
+  border: none;
+  list-style-type: none;
+}
+
+.beranda .buttonBeranda:hover {
+  background-color: #d9e6dc;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-slide {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.slick-prev {
+  left: 2rem !important;
+}
+
+.slick-next {
+  right: 2rem !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 1.2rem !important; 
+  color: white !important;
+}
+
+
+.about {
+
+  text-align: justify;
+  background-color: #fff;
+  padding: 7rem 2rem 5rem;
+}
+
+.about h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 4rem auto 2rem;
+}
+
+/* container */
+section{
+  background-color: #fff;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; 
+  gap: 2rem;
+  padding: 5rem 0;
+  border-top: 1px solid;
+  width: 200%;
+}
+
+.container img{
+  width: 350px;
+  height: auto;
+  border: 1.5px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.container .imageContainer:hover img{
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container .imageContainer{
+  position: relative;
+  width: 350px;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.container .imageContainer .image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .imageContainer .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.10);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+  font-size: 2rem;
+}
+
+.container .imageContainer:hover .overlay{
+  opacity: 1;
+} 
+
+/* contact */
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 12rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.contact p a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.contact p a:hover{
+  color: #0ca532;
+}
+
+
+/* footer */
+footer {
+  border-top: 1px solid black;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer p a{
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+footer p a:hover{
+  color: #0ca532;
+}
+
+footer .footerAll{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+  padding-top: 5rem;
+}
+
+footer ul{
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+}
+
+footer ul a{
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+footer ul a:hover{
+  color: #0ca532;
+  border: none;
+}
+
+footer .menu2{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+footer .menu2 ul{
+  display: flex;
+  flex-direction: column;
+}
+
+footer .menu2 ul li{
+  text-align: left;
+}
+
+footer .menu2 ul li a{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+footer .sosialMedia{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+footer .sosialMedia h3{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+footer .sosialMedia ul{
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  justify-content: center;
+}
+
+footer .sosialMedia a{
+  text-decoration: none;
+  color: black;
+}
+
+footer .sosialMedia i{
+  font-size: 0.8rem;
+  border: 1px solid black;
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+
+footer .formFooter{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer .formAll{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+footer .formFooter input{
+  width: 100%;
+  text-decoration: dashed;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  font-size: 0.8rem;
+  text-align: left;
+  color: black;
+}
+
+footer .formFooter button{
+  width: 6rem;
+  text-decoration: dashed;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  font-size: 0.8rem;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+footer .formFooter button:hover{
+  color: #0ca532;
+}
+
+/* images Gallery */
+.gambarPertama{
+  width: 300px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* modul Fullscreen */
+.modulFullscreen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Tombol Sebelumnya */
+.buttonLeft{
+  position: absolute;
+  left: 20px;
+  font-size: 5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Tombol Berikutnya */
+.buttonRight{
+  position: absolute;
+  right: 20px;
+  font-size: 5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Gambar Fullscreen */
+.gambarFullscreen{
+  max-width: 90%;
+  max-height: 90%; 
+  border-radius: 8px;
+}
+
+
+/* Development */
+.developmentApp{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.developmentApp .developmentBeranda{
+  margin-top: 6rem;
+}
+
+.developmentApp .developmentBeranda h1{
+  text-align: center;
+  padding: 10rem 0;
+  font-size: 4rem;
+}
+
+.developmentApp .allContainerDevelopment{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #fff;
+}
+
+.deskripsi{
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+}
+
+.deskripsi p{
+  font-weight: 300;
+}
+
+.deskripsi p span{
+  font-weight: bold;
+}
+
+.developmentApp .allContainerDevelopment .containerDevelopment1{
+  display: flex;
+  align-items: center;
+}
+
+.developmentApp .allContainerDevelopment .containerDevelopment2{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.developmentApp .allContainerDevelopment .containerDevelopment3{
+  display: flex;
+  align-items: center;
+}
+
+.developmentApp .allContainerDevelopment .containerDevelopment4{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+/* Contractor */
+.contractorApp{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+
+.contractorBeranda{
+  margin-top: 6rem;
+}
+
+.contractorBeranda h1{
+  text-align: center;
+  padding: 10rem 0;
+  font-size: 4rem;
+}
+
+.contractorApp .containerContractor{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  background-color: #fff;
+}
+.contractorApp .containerContractor .itemleft, .itemright{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contractorApp .containerContractor .itemleft{
+  flex-direction: row;
+}
+
+.contractorApp .containerContractor .itemright{
+  flex-direction: row-reverse;
+}
+
+
+.contractorApp .containerContractor img{
+  width: 400px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contractorApp .containerContractor img:hover{
+  transform: scale(1.1);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.partnerBeranda h1{
+  font-size: 3rem;
+  padding: 12rem 5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.partnerBeranda .logoEdge{
+  width: 350px;
+  position: absolute;
+  margin-left: 53rem;
+  margin-top: -8rem;
+
+}
+
+.partnerBeranda .cardAll{
+  margin: 3rem 0;
+  display: flex;
+  width: 100%;
+  gap: 13rem;
+  justify-content:space-between;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.partnerBeranda .cardPartner{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.partnerBeranda .cardPartner .cardPartnerContainer{
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #a0c0a8;
+  border-radius: 0 20px 20px 0;
+  height: 15rem;
+  width: 35rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partnerBeranda .cardPartner .cardPartnerContainer:hover{
+  transform: scale(1.1);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.partnerBeranda .cardPartner img{
+  width: 300px;
+  margin-left: 1rem;
+}
+
+
+.partnerBeranda .cardPartner h1{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: start;
+  padding: 0 1rem;
+}
+
+
+.partnerBeranda .cardPartner span{
+  font-weight: 300;
+}
+
+.partnerBeranda .cardPartner1{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+
+.partnerBeranda .cardPartner1 .cardPartnerContainer{
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #a0c0a8;
+  border-radius: 20px 0 0 20px ;
+  height: 15rem;
+  width: 35rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partnerBeranda .cardPartner1 .cardPartnerContainer:hover{
+  transform: scale(1.1);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.partnerBeranda .cardPartner1 img{
+  width: 200px;
+  margin: 0 2rem;
+}
+
+
+.partnerBeranda .cardPartner1 h1{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: start;
+  padding: 0 1rem;
+  width: 15rem;
+}
+
+
+.partnerBeranda .cardPartner1 span{
+  font-weight: 300;
+}
