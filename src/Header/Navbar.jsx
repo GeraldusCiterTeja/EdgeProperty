@@ -10,7 +10,7 @@ function Navbar(){
             <li><Link to="/partner">Partner</Link></li>
             <li><Link to="/contactUs">Contact Us</Link></li>
         </ul>
-    )
+    );
 }
 
 export default Navbar;
