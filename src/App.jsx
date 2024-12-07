@@ -7,10 +7,12 @@ import PartnerApp from "./Partner/PartnerApp";
 import Footer from "./Footer/Footer";
 import ContactUsApp from "./contactUS/ContactUSApp";
 import ContractorApp from "./contractor/ContractorApp";
+import ScrollToTop from "./Home/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomeApp />} />
