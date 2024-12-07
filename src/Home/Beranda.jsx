@@ -14,8 +14,8 @@ const Beranda = () => {
   };
 
   const slides = [
-    { id: 1, image: "/images/home1.jpg", text: "Slide 1" },
-    { id: 2, image: "/images/home2.jpg", text: "Slide 2" },
+    { id: 1, image: `images/home1.jpg`, text: "Slide 1" },
+    { id: 2, image: `images/home2.jpg`, text: "Slide 2" },
   ];
 
   return (
@@ -24,7 +24,7 @@ const Beranda = () => {
         <Slider {...settings}>
           {slides.map((slide) => (
             <div key={slide.id} className="carousel-slide">
-              <img src={slide.image}></img>
+              <img src={slide.image} alt="slide.homePage"></img>
               <h2>Edge Property</h2>
               <button className="buttonBeranda" ><a href="#about">Find Out More</a></button>
             </div>

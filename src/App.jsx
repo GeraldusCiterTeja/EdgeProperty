@@ -10,17 +10,17 @@ import ContractorApp from "./contractor/ContractorApp";
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
-        <Route path="/EdgeProperty/" element={<HomeApp />} />
+        <Route path="/" element={<HomeApp />} />
         <Route path="/development" element={<DevelopmentApp />} />
         <Route path="/contractor" element={<ContractorApp />} />
         <Route path="/partner" element={<PartnerApp />} />
         <Route path="/contactUS" element={<ContactUsApp />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 
