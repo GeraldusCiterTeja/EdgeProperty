@@ -37,9 +37,9 @@ function CardPartner() {
         {dataPartner.map((partner) => (
           <div className="cardPartnerContainer" key={partner.id}>
             <img src={partner.image}></img>
-            <h1>
+            <h2>
               {partner.text} <span>{partner.span}</span>
-            </h1>
+            </h2>
           </div>
         ))}
       </div>
@@ -47,9 +47,9 @@ function CardPartner() {
         {dataPartner1.map((partner) => (
           <div className="cardPartnerContainer" key={partner.id}>
             <img src={partner.image}></img>
-            <h1>
+            <h2>
               {partner.text} <span>{partner.span}</span>
-            </h1>
+            </h2>
           </div>
         ))}
       </div>

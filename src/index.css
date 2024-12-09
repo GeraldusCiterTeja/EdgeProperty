@@ -13,7 +13,7 @@
   scroll-behavior: smooth;
 }
 
-body html{
+body html {
   background-image: url(/images/background.png);
   width: 100%;
   height: 100%;
@@ -124,7 +124,7 @@ main {
 
 .beranda {
   max-width: 100%;
-  margin:  0;
+  margin: 0;
   height: auto;
   width: 100%;
   position: relative;
@@ -614,48 +614,49 @@ footer .formFooter button:hover {
 /* partner */
 .partnerApp {
   width: 100%;
-  height: auto;
+}
+
+.partnerBeranda {
+  position: relative;
 }
 
 .partnerBeranda h1 {
   font-size: 3rem;
   padding: 12rem 5rem 0;
   text-align: center;
-  position: relative;
 }
 
 .partnerBeranda .logoEdge {
-  width: 350px;
+  width: 300px;
   position: absolute;
-  margin-left: 53rem;
-  margin-top: -8rem;
+  right: 1rem;
+  margin-top: -5rem;
 }
 
 .partnerBeranda .cardAll {
   margin: 3rem 0;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 13rem;
   justify-content: space-between;
+  padding: 1rem 0;
   overflow: hidden;
-  padding: 2rem 0;
+  position: relative;
 }
 
 .partnerBeranda .cardPartner {
-  /* width: 500px; */
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
 .partnerBeranda .cardPartner1 {
-  /* width: 500px; */
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.partnerBeranda .cardPartner .cardPartnerContainer {
+.partnerBeranda .cardPartnerContainer {
   border: 1px solid black;
   display: flex;
   position: relative;
@@ -678,27 +679,23 @@ footer .formFooter button:hover {
   margin-left: 1rem;
 }
 
-.partnerBeranda .cardPartner h1 {
+.partnerBeranda h2 {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: start;
   padding: 0 1rem;
 }
 
-.partnerBeranda .cardPartner span {
+.partnerBeranda span {
   font-weight: 300;
 }
 
+.partnerBeranda .cardPartner1 {
+  margin-top: 5rem;
+}
+
 .partnerBeranda .cardPartner1 .cardPartnerContainer {
-  border: 1px solid black;
-  display: flex;
-  position: relative;
-  align-items: center;
-  background-color: #a0c0a8;
   border-radius: 20px 0 0 20px;
-  height: 15rem;
-  width: 35rem;
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -712,18 +709,6 @@ footer .formFooter button:hover {
   margin: 0 2rem;
 }
 
-.partnerBeranda .cardPartner1 h1 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: start;
-  padding: 0 1rem;
-  width: 15rem;
-}
-
-.partnerBeranda .cardPartner1 span {
-  font-weight: 300;
-}
-
 /* Media Query */
 
 @media only screen and (max-width: 768px) {
@@ -731,7 +716,7 @@ footer .formFooter button:hover {
     font-size: 75%;
   }
 
-  .header{
+  .header {
     padding: 1rem 0.5rem;
   }
 
@@ -762,7 +747,7 @@ footer .formFooter button:hover {
     opacity: 1;
   }
 
-  .header .menu-icon{
+  .header .menu-icon {
     display: flex;
   }
 
@@ -770,6 +755,45 @@ footer .formFooter button:hover {
     font-size: 0.8rem;
   }
 
+  /* Partner */
+
+  .partnerBeranda h1 {
+    font-size: 2.5rem;
+  }
+
+  .partnerBeranda .logoEdge {
+    margin-top: -6rem;
+    width: 250px;
+  }
+
+  .partnerBeranda .cardAll {
+    justify-content: none;
+    flex-direction: column;
+    margin: 5rem 0;
+  }
+
+  .partnerBeranda .cardPartner {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .partnerBeranda .cardPartner1 {
+    margin-top: 3rem;
+  }
+
+  .partnerBeranda .cardPartnerContainer {
+    width: 30rem;
+  }
+
+  .partnerBeranda .cardPartner img {
+    width: 200px;
+  }
+
+  .partnerBeranda .cardPartner1 .cardPartnerContainer {
+    border-radius: 0 20px 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 }
 
 .nav-menu.active {
@@ -787,8 +811,8 @@ footer .formFooter button:hover {
   }
 }
 
-@media only screen and (max-width: 480px){
-  body{
+@media only screen and (max-width: 480px) {
+  body {
     font-size: 50%;
   }
 
@@ -798,16 +822,15 @@ footer .formFooter button:hover {
     position: relative;
   }
 
-  .beranda{
-
+  .beranda {
   }
 
-  .beranda h2{
+  .beranda h2 {
     font-size: 3rem;
     margin-top: 5rem;
   }
 
-  .beranda .buttonBeranda{
+  .beranda .buttonBeranda {
     padding: 0.5rem 1rem;
     margin-top: 1rem;
   }
@@ -816,46 +839,115 @@ footer .formFooter button:hover {
     height: 250px;
   }
 
-  .about{
-    position: relative;
-    padding: 0;
+  .slick-prev {
+    left: 0.5rem !important;
   }
 
-  .about h3{
+  .slick-next {
+    right: 1rem !important;
+  }
+
+  .about {
+    position: relative;
+    padding: 0 1rem;
+  }
+
+  .about h3 {
     font-size: 1rem;
   }
 
-  .container{
-    padding: 0;
+  .container {
+    padding: 2rem auto;
     gap: 1rem;
   }
 
-  .container img{
+  .container img {
     width: 10px;
   }
 
-  .container .imageContainer{
+  .container .imageContainer {
     width: 80%;
   }
 
-  .contact{
-    padding: 0;
+  .contact {
+    padding-top: 3rem;
   }
 
-  iframe{
+  iframe {
     width: 100%;
     border: none;
     height: 500px;
+    padding: 1rem;
   }
 
-  footer{
-    padding: 0;
+  footer {
+    padding: 1rem;
     background-image: url(/images/background.png);
   }
 
-  footer .footerAll{
+  footer .footerAll {
     gap: 1rem;
     padding-top: 2rem;
+    padding-bottom: 0;
     padding-bottom: 4rem;
+    justify-content: start;
+  }
+
+  footer .sosialMedia {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Partner */
+  .partnerBeranda h1 {
+    padding: 3rem 0 1rem;
+  }
+
+  .partnerBeranda .logoEdge {
+    width: 120px;
+    margin-top: -4rem;
+  }
+
+  .partnerBeranda .cardAll {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partnerBeranda .cardPartner {
+    gap: 1rem;
+  }
+
+  .partnerBeranda .cardPartner1{
+    gap: 1rem;
+  }
+
+  .partnerBeranda .cardPartnerContainer{
+    width: 20rem;
+    border-radius: 20px;
+    height: 10rem;
+  }
+
+  .partnerBeranda .cardPartner img {
+    width: 150px;
+    margin-left: 1rem;
+  }
+
+  .partnerBeranda h2{
+    font-size: 0.8rem;
+  }
+
+  .partnerBeranda .cardPartner1 {
+    margin-top: 1rem;
+  }
+
+  .partnerBeranda .cardPartner1 .cardPartnerContainer {
+    border-radius: 20px;
+  }
+
+  .partnerBeranda .cardPartner1 img{
+    width: 100px;
   }
 }
