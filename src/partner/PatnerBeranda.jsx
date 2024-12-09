@@ -7,7 +7,6 @@ function PartnerBeranda(){
             <h1>PARTNER</h1>
             <img className="logoEdge" src="images/logo.svg"></img>
             <CardPartner />
-
         </div>
     )
 }

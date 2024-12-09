@@ -3,9 +3,9 @@ import PartnerBeranda from "./PatnerBeranda";
 
 function PartnerApp(){
     return(
-        <>
+        <div className="partnerApp">
             <PartnerBeranda />
-        </>
+        </div>
     )
 }
 

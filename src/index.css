@@ -1,10 +1,9 @@
 @font-face {
-  font-family: 'Humanist 777'; /* Nama font yang akan digunakan */
-  src: url('./assets/fonts/Humanist-777.ttf') format('truetype'); /* Sesuaikan format */
+  font-family: "Humanist 777";
+  src: url("./assets/fonts/Humanist-777.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 
 * {
   margin: 0;
@@ -14,39 +13,47 @@
   scroll-behavior: smooth;
 }
 
-
-
-body {
+body html{
   background-image: url(/images/background.png);
+  width: 100%;
+  height: 100%;
 }
 
+/* navbar */
 .header {
   position: fixed;
   top: 0;
   background-image: url(/images/background.png);
   width: 100%;
   align-items: center;
+  display: flex;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  justify-content: center;
+  padding: 1.5rem 0.5rem;
   border-bottom: 1px solid black;
   box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
-/* navbar */
+.header .navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.header img {
+  width: 300px;
+  margin: -8.5rem 0rem;
+}
+
 .header ul {
   display: flex;
   gap: 1rem;
   list-style-type: none;
   position: relative;
   justify-content: end;
-}
-
-.header img {
-  width: 300px;
-  margin: -8.5rem 2rem;
-  position: absolute;
-  justify-content: start;
 }
 
 .header ul li a {
@@ -78,6 +85,36 @@ body {
   left: 0;
 }
 
+.header .menu-icon {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1500;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-icon svg {
+  pointer-events: none;
+}
+
+.header .menu-icon.open {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header .nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
 /* Home */
 main {
   display: flex;
@@ -87,15 +124,14 @@ main {
 
 .beranda {
   max-width: 100%;
-  margin: 8rem  auto 0;
+  margin:  0;
   height: auto;
   width: 100%;
-  background-color: #007bff;
   position: relative;
   overflow: hidden;
 }
 
-.beranda img{
+.beranda img {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -104,17 +140,16 @@ main {
 
 .beranda h2 {
   z-index: 2;
-  font-family: 'Humanist 777';
-  color: white;
+  font-family: "Humanist 777";
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-weight: bold;
-  margin: 15rem 0 0;
+  margin: 18rem 0 0;
   text-align: center;
   font-size: 5rem;
   color: #fff;
 }
 
-.beranda a{
+.beranda a {
   color: black;
   text-decoration: none;
   padding: 1rem 2rem;
@@ -142,7 +177,7 @@ main {
 }
 
 .carousel-slide {
-  height: 500px;
+  height: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -152,7 +187,8 @@ main {
   text-align: center;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   z-index: 1;
   width: 5rem;
   height: 2rem;
@@ -168,17 +204,18 @@ main {
   right: 2rem !important;
 }
 
-.slick-prev:before, .slick-next:before {
-  font-size: 1.2rem !important; 
+.slick-prev:before,
+.slick-next:before {
+  font-size: 2rem !important;
   color: white !important;
 }
 
-
+/* about */
 .about {
-
   text-align: justify;
   background-color: #fff;
   padding: 7rem 2rem 5rem;
+  /* position: relative; */
 }
 
 .about h3 {
@@ -188,7 +225,7 @@ main {
 }
 
 /* container */
-section{
+section {
   background-color: #fff;
 }
 .container {
@@ -196,14 +233,14 @@ section{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
   gap: 2rem;
   padding: 5rem 0;
   border-top: 1px solid;
-  width: 200%;
+  width: 100%;
 }
 
-.container img{
+.container img {
   width: 350px;
   height: auto;
   border: 1.5px solid black;
@@ -211,12 +248,12 @@ section{
   background-color: #fff;
 }
 
-.container .imageContainer:hover img{
+.container .imageContainer:hover img {
   transform: scale(1.1);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.container .imageContainer{
+.container .imageContainer {
   position: relative;
   width: 350px;
   height: auto;
@@ -225,34 +262,34 @@ section{
   object-fit: cover;
 }
 
-.container .imageContainer .image{
+.container .imageContainer .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.container .imageContainer .overlay{
+.container .imageContainer .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
-  background-color: rgba(0, 0, 0, 0.10);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 2rem;
 }
 
-.container .imageContainer:hover .overlay{
+.container .imageContainer:hover .overlay {
   opacity: 1;
-} 
+}
 
 /* contact */
-.contact{
+.contact {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -266,7 +303,6 @@ section{
   color: black;
 }
 
-
 .contact p a {
   font-size: 0.8rem;
   text-decoration: none;
@@ -274,10 +310,9 @@ section{
   transition: color 0.3s ease;
 }
 
-.contact p a:hover{
+.contact p a:hover {
   color: #0ca532;
 }
-
 
 /* footer */
 footer {
@@ -289,17 +324,17 @@ footer {
   flex-direction: column;
 }
 
-footer p a{
+footer p a {
   text-decoration: none;
   color: black;
   transition: color 0.3s ease;
 }
 
-footer p a:hover{
+footer p a:hover {
   color: #0ca532;
 }
 
-footer .footerAll{
+footer .footerAll {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -307,87 +342,87 @@ footer .footerAll{
   padding-top: 5rem;
 }
 
-footer ul{
+footer ul {
   list-style-type: none;
   text-align: left;
   padding: 0;
 }
 
-footer ul a{
+footer ul a {
   text-decoration: none;
   color: black;
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
-footer ul a:hover{
+footer ul a:hover {
   color: #0ca532;
   border: none;
 }
 
-footer .menu2{
+footer .menu2 {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-footer .menu2 ul{
+footer .menu2 ul {
   display: flex;
   flex-direction: column;
 }
 
-footer .menu2 ul li{
+footer .menu2 ul li {
   text-align: left;
 }
 
-footer .menu2 ul li a{
+footer .menu2 ul li a {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-footer .sosialMedia{
+footer .sosialMedia {
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
 }
 
-footer .sosialMedia h3{
+footer .sosialMedia h3 {
   text-align: center;
   padding-bottom: 1rem;
 }
 
-footer .sosialMedia ul{
+footer .sosialMedia ul {
   display: flex;
   gap: 1rem;
   list-style-type: none;
   justify-content: center;
 }
 
-footer .sosialMedia a{
+footer .sosialMedia a {
   text-decoration: none;
   color: black;
 }
 
-footer .sosialMedia i{
+footer .sosialMedia i {
   font-size: 0.8rem;
   border: 1px solid black;
   border-radius: 100%;
   padding: 0.5rem;
 }
 
-footer .formFooter{
+footer .formFooter {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-footer .formAll{
+footer .formAll {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-footer .formFooter input{
+footer .formFooter input {
   width: 100%;
   text-decoration: dashed;
   border: none;
@@ -399,7 +434,7 @@ footer .formFooter input{
   color: black;
 }
 
-footer .formFooter button{
+footer .formFooter button {
   width: 6rem;
   text-decoration: dashed;
   border: none;
@@ -410,12 +445,12 @@ footer .formFooter button{
   transition: color 0.3s ease;
 }
 
-footer .formFooter button:hover{
+footer .formFooter button:hover {
   color: #0ca532;
 }
 
 /* images Gallery */
-.gambarPertama{
+.gambarPertama {
   width: 300px;
   cursor: pointer;
   border-radius: 8px;
@@ -423,13 +458,13 @@ footer .formFooter button:hover{
 }
 
 /* modul Fullscreen */
-.modulFullscreen{
+.modulFullscreen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -437,7 +472,7 @@ footer .formFooter button:hover{
 }
 
 /* Tombol Sebelumnya */
-.buttonLeft{
+.buttonLeft {
   position: absolute;
   left: 20px;
   font-size: 5rem;
@@ -448,7 +483,7 @@ footer .formFooter button:hover{
 }
 
 /* Tombol Berikutnya */
-.buttonRight{
+.buttonRight {
   position: absolute;
   right: 20px;
   font-size: 5rem;
@@ -459,31 +494,30 @@ footer .formFooter button:hover{
 }
 
 /* Gambar Fullscreen */
-.gambarFullscreen{
+.gambarFullscreen {
   max-width: 90%;
-  max-height: 90%; 
+  max-height: 90%;
   border-radius: 8px;
 }
 
-
 /* Development */
-.developmentApp{
+.developmentApp {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-.developmentApp .developmentBeranda{
+.developmentApp .developmentBeranda {
   margin-top: 6rem;
 }
 
-.developmentApp .developmentBeranda h1{
+.developmentApp .developmentBeranda h1 {
   text-align: center;
   padding: 10rem 0;
   font-size: 4rem;
 }
 
-.developmentApp .allContainerDevelopment{
+.developmentApp .allContainerDevelopment {
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -491,127 +525,137 @@ footer .formFooter button:hover{
   background-color: #fff;
 }
 
-.deskripsi{
+.deskripsi {
   display: flex;
   flex-direction: column;
   padding: 0 4rem;
 }
 
-.deskripsi p{
+.deskripsi p {
   font-weight: 300;
 }
 
-.deskripsi p span{
+.deskripsi p span {
   font-weight: bold;
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment1{
+.developmentApp .allContainerDevelopment .containerDevelopment1 {
   display: flex;
   align-items: center;
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment2{
+.developmentApp .allContainerDevelopment .containerDevelopment2 {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment3{
+.developmentApp .allContainerDevelopment .containerDevelopment3 {
   display: flex;
   align-items: center;
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment4{
+.developmentApp .allContainerDevelopment .containerDevelopment4 {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
 }
 
 /* Contractor */
-.contractorApp{
+.contractorApp {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-
-.contractorBeranda{
+.contractorBeranda {
   margin-top: 6rem;
 }
 
-.contractorBeranda h1{
+.contractorBeranda h1 {
   text-align: center;
   padding: 10rem 0;
   font-size: 4rem;
 }
 
-.contractorApp .containerContractor{
+.contractorApp .containerContractor {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding: 3rem 2rem;
   background-color: #fff;
 }
-.contractorApp .containerContractor .itemleft, .itemright{
+.contractorApp .containerContractor .itemleft,
+.itemright {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
 
-.contractorApp .containerContractor .itemleft{
+.contractorApp .containerContractor .itemleft {
   flex-direction: row;
 }
 
-.contractorApp .containerContractor .itemright{
+.contractorApp .containerContractor .itemright {
   flex-direction: row-reverse;
 }
 
-
-.contractorApp .containerContractor img{
+.contractorApp .containerContractor img {
   width: 400px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contractorApp .containerContractor img:hover{
+.contractorApp .containerContractor img:hover {
   transform: scale(1.1);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* partner */
+.partnerApp {
+  width: 100%;
+  height: auto;
+}
 
-.partnerBeranda h1{
+.partnerBeranda h1 {
   font-size: 3rem;
   padding: 12rem 5rem 0;
   text-align: center;
   position: relative;
 }
 
-.partnerBeranda .logoEdge{
+.partnerBeranda .logoEdge {
   width: 350px;
   position: absolute;
   margin-left: 53rem;
   margin-top: -8rem;
-
 }
 
-.partnerBeranda .cardAll{
+.partnerBeranda .cardAll {
   margin: 3rem 0;
   display: flex;
   width: 100%;
   gap: 13rem;
-  justify-content:space-between;
+  justify-content: space-between;
   overflow: hidden;
   padding: 2rem 0;
 }
 
-.partnerBeranda .cardPartner{
-  width: 500px;
+.partnerBeranda .cardPartner {
+  /* width: 500px; */
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.partnerBeranda .cardPartner .cardPartnerContainer{
+.partnerBeranda .cardPartner1 {
+  /* width: 500px; */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.partnerBeranda .cardPartner .cardPartnerContainer {
   border: 1px solid black;
   display: flex;
   position: relative;
@@ -624,66 +668,51 @@ footer .formFooter button:hover{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.partnerBeranda .cardPartner .cardPartnerContainer:hover{
+.partnerBeranda .cardPartner .cardPartnerContainer:hover {
   transform: scale(1.1);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-.partnerBeranda .cardPartner img{
+.partnerBeranda .cardPartner img {
   width: 300px;
   margin-left: 1rem;
 }
 
-
-.partnerBeranda .cardPartner h1{
+.partnerBeranda .cardPartner h1 {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: start;
   padding: 0 1rem;
 }
 
-
-.partnerBeranda .cardPartner span{
+.partnerBeranda .cardPartner span {
   font-weight: 300;
 }
 
-.partnerBeranda .cardPartner1{
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 5rem;
-}
-
-
-.partnerBeranda .cardPartner1 .cardPartnerContainer{
+.partnerBeranda .cardPartner1 .cardPartnerContainer {
   border: 1px solid black;
   display: flex;
   position: relative;
   align-items: center;
   background-color: #a0c0a8;
-  border-radius: 20px 0 0 20px ;
+  border-radius: 20px 0 0 20px;
   height: 15rem;
   width: 35rem;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.partnerBeranda .cardPartner1 .cardPartnerContainer:hover{
+.partnerBeranda .cardPartner1 .cardPartnerContainer:hover {
   transform: scale(1.1);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-
-.partnerBeranda .cardPartner1 img{
+.partnerBeranda .cardPartner1 img {
   width: 200px;
   margin: 0 2rem;
 }
 
-
-.partnerBeranda .cardPartner1 h1{
+.partnerBeranda .cardPartner1 h1 {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: start;
@@ -691,7 +720,142 @@ footer .formFooter button:hover{
   width: 15rem;
 }
 
-
-.partnerBeranda .cardPartner1 span{
+.partnerBeranda .cardPartner1 span {
   font-weight: 300;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 75%;
+  }
+
+  .header{
+    padding: 1rem 0.5rem;
+  }
+
+  .header .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px #0000001a;
+    transform: translateY(0px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid black;
+  }
+
+  .header .nav-menu.active {
+    top: 100%;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .header .menu-icon{
+    display: flex;
+  }
+
+  .header ul li {
+    font-size: 0.8rem;
+  }
+
+}
+
+.nav-menu.active {
+  animation: slideIn 0.6s ease-in-out forwards;
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  body{
+    font-size: 50%;
+  }
+
+  .header {
+    width: 100%;
+    background-color: #0ca532;
+    position: relative;
+  }
+
+  .beranda{
+
+  }
+
+  .beranda h2{
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+
+  .beranda .buttonBeranda{
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .carousel-slide {
+    height: 250px;
+  }
+
+  .about{
+    position: relative;
+    padding: 0;
+  }
+
+  .about h3{
+    font-size: 1rem;
+  }
+
+  .container{
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .container img{
+    width: 10px;
+  }
+
+  .container .imageContainer{
+    width: 80%;
+  }
+
+  .contact{
+    padding: 0;
+  }
+
+  iframe{
+    width: 100%;
+    border: none;
+    height: 500px;
+  }
+
+  footer{
+    padding: 0;
+    background-image: url(/images/background.png);
+  }
+
+  footer .footerAll{
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
 }
