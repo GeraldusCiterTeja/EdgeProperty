@@ -322,6 +322,7 @@ footer {
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
+  background-image: url(/images/background.png);
 }
 
 footer p a {
@@ -501,64 +502,241 @@ footer .formFooter button:hover {
 }
 
 /* Development */
-.developmentApp {
+.appDevelopment {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-.developmentApp .developmentBeranda {
+.appDevelopment .developmentBeranda {
+  background-image: url(images/home1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
   margin-top: 6rem;
 }
 
-.developmentApp .developmentBeranda h1 {
+.appDevelopment .developmentBeranda h1 {
   text-align: center;
-  padding: 10rem 0;
+  padding: 8rem 0;
   font-size: 4rem;
+  border-bottom: 1px solid black;
 }
 
-.developmentApp .allContainerDevelopment {
-  padding: 2rem;
+.appDevelopment .containerDev {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.deskripsi {
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
-  padding: 0 4rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding-top: 50rem;
+  padding-bottom: 50rem;
+  overflow-y: auto;
 }
 
-.deskripsi p {
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 400px;
+}
+
+.modal-content .logo {
+  width: 300px;
+  height: 300px;
+  top: 19rem;
+  align-items: center;
+  position: absolute;
+}
+
+.modal-content .deskripsi {
+  padding: 7rem 2rem 0;
   font-weight: 300;
 }
 
-.deskripsi p span {
+.modal-content span {
   font-weight: bold;
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment1 {
-  display: flex;
-  align-items: center;
+.modal-close {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 40px;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  color: black;
+  padding: 0.6rem;
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment2 {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
+.modal-close:hover{
+  color: #a0c0a8;
+
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment3 {
+.modal-features {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  background-color: #eaeaea;
+  padding: 1rem 0;
 }
 
-.developmentApp .allContainerDevelopment .containerDevelopment4 {
+.modal-feature {
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 30px;
+}
+
+.feature-label {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.feature-description {
+  color: gray;
+  font-size: 14px;
+}
+
+/* Kartu */
+.card {
+  position: relative;
+  width: 300px;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  max-height: 300px;
+  height: 300px;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 0.5rem 1rem 0;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+}
+
+.card-info p{
+  font-size: 0.8rem;
+  font-weight: 300;
+  
+}
+
+/* Slider */
+.slider {
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
+  margin: 20px 40px;
+}
+
+.slider img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.location {
+  display: flex;
+  padding: 3rem 2rem;
+  text-align: left;
+  position: relative;
+  background-color: #a0c0a8;
+}
+
+.location h3 {
+  font-size: 1.3rem;
+}
+
+.location p {
+  font-size: 0.8rem;
+}
+
+.location .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.location .info span {
+  font-weight: bold;
+}
+
+.location img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 2rem;
+  top: 0;
 }
 
 /* Contractor */
@@ -580,6 +758,7 @@ footer .formFooter button:hover {
 
 .contractorApp .containerContractor {
   display: flex;
+  display: none;
   flex-direction: column;
   gap: 3rem;
   padding: 3rem 2rem;
@@ -882,7 +1061,6 @@ footer .formFooter button:hover {
 
   footer {
     padding: 1rem;
-    background-image: url(/images/background.png);
   }
 
   footer .footerAll {
@@ -920,11 +1098,11 @@ footer .formFooter button:hover {
     gap: 1rem;
   }
 
-  .partnerBeranda .cardPartner1{
+  .partnerBeranda .cardPartner1 {
     gap: 1rem;
   }
 
-  .partnerBeranda .cardPartnerContainer{
+  .partnerBeranda .cardPartnerContainer {
     width: 20rem;
     border-radius: 20px;
     height: 10rem;
@@ -935,7 +1113,7 @@ footer .formFooter button:hover {
     margin-left: 1rem;
   }
 
-  .partnerBeranda h2{
+  .partnerBeranda h2 {
     font-size: 0.8rem;
   }
 
@@ -947,7 +1125,7 @@ footer .formFooter button:hover {
     border-radius: 20px;
   }
 
-  .partnerBeranda .cardPartner1 img{
+  .partnerBeranda .cardPartner1 img {
     width: 100px;
   }
 }
