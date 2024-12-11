@@ -14,7 +14,7 @@ function App() {
     <>
       <ScrollToTop />
       <Header />
-      <Routes>
+      <Routes basename="/EdgeProperty">
         <Route path="/" element={<HomeApp />} />
         <Route path="/development" element={<AppDevelopment />} />
         <Route path="/contractor" element={<ContractorApp />} />
