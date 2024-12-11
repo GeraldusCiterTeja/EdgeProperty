@@ -219,31 +219,6 @@ main {
   overflow: hidden;
 }
 
-.about .animasiLogo{
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  top: -2rem;
-  animation: logoMove 50s linear infinite;
-}
-
-@keyframes logoMove {
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(100vw);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.about img{
-  width: 300px;
-  opacity: 0.8;
-}
-
 .about h3 {
   text-align: center;
   font-size: 2.5rem;
@@ -570,7 +545,7 @@ footer .formFooter button:hover {
 }
 
 .appDevelopment .developmentBeranda {
-  background-image: url(images/home1.jpg);
+  background-image: url('images/home1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;

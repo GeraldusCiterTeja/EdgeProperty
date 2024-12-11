@@ -3,18 +3,6 @@ import React from "react";
 function About() {
   return (
     <section className="about" id="about">
-      <div className="animasiLogo">
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-        <img src="images/logo.svg"></img>
-      </div>
       <h3 className="fade-in">ABOUT EDGEPROPERTY</h3>
       <p className="fade-in">
         <b> Edge Property </b>
