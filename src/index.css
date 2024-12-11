@@ -215,13 +215,74 @@ main {
   text-align: justify;
   background-color: #fff;
   padding: 7rem 2rem 5rem;
-  /* position: relative; */
+  position: relative;
+  overflow: hidden;
+}
+
+.about .animasiLogo{
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: -2rem;
+  animation: logoMove 50s linear infinite;
+}
+
+@keyframes logoMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.about img{
+  width: 300px;
+  opacity: 0.8;
 }
 
 .about h3 {
   text-align: center;
   font-size: 2.5rem;
   margin: 4rem auto 2rem;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInEffect 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  transform: translateY(20px);
+}
+
+.fade-in {
+  animation: slideUp 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* container */
@@ -520,6 +581,8 @@ footer .formFooter button:hover {
   text-align: center;
   padding: 8rem 0;
   font-size: 4rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid black;
 }
 
@@ -593,17 +656,17 @@ footer .formFooter button:hover {
   padding: 0.6rem;
 }
 
-.modal-close:hover{
+.modal-close:hover {
   color: #a0c0a8;
-
 }
 
 .modal-features {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 20px;
   background-color: #eaeaea;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .modal-feature {
@@ -617,11 +680,12 @@ footer .formFooter button:hover {
 .feature-label {
   font-weight: bold;
   margin: 5px 0;
+  font-size: 0.8rem;
 }
 
 .feature-description {
   color: gray;
-  font-size: 14px;
+  font-size: 0.5rem;
 }
 
 /* Kartu */
@@ -661,10 +725,9 @@ footer .formFooter button:hover {
   font-size: 1.2rem;
 }
 
-.card-info p{
+.card-info p {
   font-size: 0.8rem;
   font-weight: 300;
-  
 }
 
 /* Slider */
@@ -740,7 +803,7 @@ footer .formFooter button:hover {
 }
 
 /* Contractor */
-.contractorApp {
+.appContractor {
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -756,7 +819,7 @@ footer .formFooter button:hover {
   font-size: 4rem;
 }
 
-.contractorApp .containerContractor {
+.appContractor .containerContractor {
   display: flex;
   display: none;
   flex-direction: column;
@@ -889,7 +952,6 @@ footer .formFooter button:hover {
 }
 
 /* Media Query */
-
 @media only screen and (max-width: 768px) {
   body {
     font-size: 75%;
@@ -934,8 +996,16 @@ footer .formFooter button:hover {
     font-size: 0.8rem;
   }
 
-  /* Partner */
+  /* Development */
+  .slider{
+    margin: 20px 0;
+  }
 
+  .slider img{
+    width: 95%;
+  }
+
+  /* Partner */
   .partnerBeranda h1 {
     font-size: 2.5rem;
   }
@@ -1002,10 +1072,15 @@ footer .formFooter button:hover {
   }
 
   .beranda {
+    height: 50%;
+  }
+
+  .beranda img{
+    height: auto;
   }
 
   .beranda h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-top: 5rem;
   }
 
@@ -1075,6 +1150,59 @@ footer .formFooter button:hover {
     display: flex;
     flex-direction: column;
     padding-bottom: 0.5rem;
+  }
+
+  /* Development */
+
+  .appDevelopment .developmentBeranda {
+    margin-top: 0rem;
+  }
+  .appDevelopment .developmentBeranda h1 {
+    font-size: 2rem;
+    padding: 5rem 0;
+  }
+
+  /* Modal */
+  .modal-overlay{
+    padding-top: 32rem;
+    padding-bottom: 0;
+
+  } 
+
+  .modal-content {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .modal-content img {
+    height: 300px;
+  }
+
+  .modal-content .logo {
+    width: 200px;
+    top: 12rem;
+  }
+
+  .modal-content .deskripsi {
+    padding: 5rem 1rem 0;
+  }
+
+  /* slider */
+  .slider{
+    margin: 20px 0;
+  }
+
+  .slider img{
+    width: 90%;
+  }
+
+  /* Constractor */
+  .contractorBeranda{
+    margin: 0;
+  }
+
+  .appContractor h1{
+    font-size: 2rem;
   }
 
   /* Partner */

@@ -23,17 +23,15 @@ function DevApp4() {
   const [isOpen, setIsOpen] = useState(false);
   
   const property = {
-    title: "Citraland City Losari",
+    title: "Royal balangan",
     features: [
-      { icon: "🗺️", label: "5,8 Hectare", description: "Land Area" },
-      { icon: "🏠", label: "30 Units", description: "Luxury Waterfront Villa" },
-      {
-        icon: "✈️",
-        label: "20 Minutes",
-        description: "Soekarno-Hatta Airport",
-      },
-      { icon: "🚴", label: "1,5 km", description: "Jogging Track" },
-      { icon: "🏡", label: "Finehomes", description: "Signature" },
+      { icon: <i className="bi bi-bounding-box"></i>
+        , label: "5 Are", description: "Area of Development" },
+      { icon: <i className="bi bi-building"></i>
+        , label: "3 Units", description: "House" },
+      { icon: <i className="bi bi-pin-map"></i> , label: "Location", description: "Balangan, Badung, Bali" },
+      { icon: <i className="bi bi-clock"></i>
+        , label: "Started", description: "2024" },
     ],
     images: [
       "images/project4_VillaRoyalBalangan.jpg",

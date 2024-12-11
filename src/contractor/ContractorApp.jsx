@@ -3,7 +3,7 @@ import ContractorBeranda from "./ContractorBeranda";
 
 function ContractorApp(){
     return(
-        <div className="contractorApp">
+        <div className="appContractor">
             <ContractorBeranda />
         </div>
     );

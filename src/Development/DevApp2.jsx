@@ -23,17 +23,15 @@ function DevApp2() {
   const [isOpen, setIsOpen] = useState(false);
   
   const property = {
-    title: "Citraland City Losari",
+    title: "Taman Shanata",
     features: [
-      { icon: "🗺️", label: "5,8 Hectare", description: "Land Area" },
-      { icon: "🏠", label: "30 Units", description: "Luxury Waterfront Villa" },
-      {
-        icon: "✈️",
-        label: "20 Minutes",
-        description: "Soekarno-Hatta Airport",
-      },
-      { icon: "🚴", label: "1,5 km", description: "Jogging Track" },
-      { icon: "🏡", label: "Finehomes", description: "Signature" },
+      { icon: <i className="bi bi-bounding-box"></i>
+        , label: "1.5 ha", description: "Area of Development" },
+      { icon: <i className="bi bi-building"></i>
+        , label: "95 Units", description: "House" },
+      { icon: <i className="bi bi-pin-map"></i> , label: "Location", description: "Nyitdah, Tabanan, Bali" },
+      { icon: <i className="bi bi-clock"></i>
+        , label: "Started", description: "2023" },
     ],
     images: [
       "images/project2_DroneTaman2.jpg",
