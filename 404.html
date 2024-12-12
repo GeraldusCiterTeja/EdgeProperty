@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
+    <title>Redirecting...</title>
+    <script>
+      // Ambil path dari URL
+      const path = window.location.pathname;
+
+      // Tambahkan nama base URL untuk GitHub Pages
+      const base = "/EdgeProperty";
+
+      // Redirect ke index.html sambil menyertakan path
+      window.location.replace(`${base}/index.html${path}`);
+    </script>
   </head>
   <body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
   </body>
 </html>
