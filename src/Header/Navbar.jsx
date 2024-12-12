@@ -6,8 +6,8 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
     console.log("Before toggle:", isOpen);
-    setIsOpen(!isOpen);
     console.log("After toggle:", !isOpen);
   };
 
@@ -17,7 +17,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest(".navbar-container")) {
+      if (isOpen && !event.target.closest(".navbar-container")) {
         closeMenu();
       }
     };
@@ -26,7 +26,7 @@ function Navbar() {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [isOpen]);
 
   return (
     <nav className="header">
@@ -35,6 +35,7 @@ function Navbar() {
         <div
           className={`menu-icon ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>

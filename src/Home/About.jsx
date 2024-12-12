@@ -25,7 +25,6 @@ function About() {
         With Edge Property, we build more than properties—we create
         opportunities and futures.
       </p>
-      
     </section>
   );
 }

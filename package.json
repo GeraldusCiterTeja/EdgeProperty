@@ -1,9 +1,9 @@
 {
-  "name": "edge",
+  "name": "edgeproperty",
   "private": true,
   "version": "0.0.0",
   "homepage": "https://geraldusciterteja.github.io/EdgeProperty/",
-  "type": "module",
+  "type": "module", 
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

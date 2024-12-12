@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Humanist 777";
-  src: url("./assets/fonts/Humanist-777.ttf") format("truetype");
+  src: url("./fonts/Humanist-777-Font.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -140,7 +140,7 @@ main {
 
 .beranda h2 {
   z-index: 2;
-  font-family: "Humanist 777";
+  font-family: "Humanist 777", sans-serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-weight: bold;
   margin: 18rem 0 0;
@@ -194,6 +194,7 @@ main {
   height: 2rem;
   display: flex;
   flex-direction: column;
+  top: 20.4rem !important;
 }
 
 .slick-prev {
@@ -545,7 +546,7 @@ footer .formFooter button:hover {
 }
 
 .appDevelopment .developmentBeranda {
-  background-image: url('/images/home1.jpg');
+  background-image: url("/images/home1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
@@ -559,6 +560,7 @@ footer .formFooter button:hover {
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid black;
+  font-family: "Humanist 777", sans-serif;
 }
 
 .appDevelopment .containerDev {
@@ -745,6 +747,7 @@ footer .formFooter button:hover {
 
 .location {
   display: flex;
+  flex-wrap: wrap;
   padding: 3rem 2rem;
   text-align: left;
   position: relative;
@@ -792,6 +795,7 @@ footer .formFooter button:hover {
   text-align: center;
   padding: 10rem 0;
   font-size: 4rem;
+  font-family: "Humanist 777", sans-serif;
 }
 
 .appContractor .containerContractor {
@@ -955,12 +959,14 @@ footer .formFooter button:hover {
     gap: 1rem;
     padding: 1rem 0;
     border-top: 1px solid black;
+    display: none;
   }
 
   .header .nav-menu.active {
     top: 100%;
     transform: translateY(0);
     opacity: 1;
+    display: flex;
   }
 
   .header .menu-icon {
@@ -971,12 +977,17 @@ footer .formFooter button:hover {
     font-size: 0.8rem;
   }
 
+  .slick-prev,
+  .slick-next {
+    top: 21rem !important;
+  }
+
   /* Development */
-  .slider{
+  .slider {
     margin: 20px 0;
   }
 
-  .slider img{
+  .slider img {
     width: 95%;
   }
 
@@ -1050,7 +1061,7 @@ footer .formFooter button:hover {
     height: 50%;
   }
 
-  .beranda img{
+  .beranda img {
     height: auto;
   }
 
@@ -1109,6 +1120,7 @@ footer .formFooter button:hover {
     padding: 1rem;
   }
 
+  /* Footer */
   footer {
     padding: 1rem;
   }
@@ -1138,11 +1150,10 @@ footer .formFooter button:hover {
   }
 
   /* Modal */
-  .modal-overlay{
+  .modal-overlay {
     padding-top: 32rem;
     padding-bottom: 0;
-
-  } 
+  }
 
   .modal-content {
     margin-top: 0;
@@ -1162,21 +1173,27 @@ footer .formFooter button:hover {
     padding: 5rem 1rem 0;
   }
 
+  .location img {
+    width: 100px;
+    right: 1rem;
+    top: 3rem;
+  }
+
   /* slider */
-  .slider{
+  .slider {
     margin: 20px 0;
   }
 
-  .slider img{
+  .slider img {
     width: 90%;
   }
 
   /* Constractor */
-  .contractorBeranda{
+  .contractorBeranda {
     margin: 0;
   }
 
-  .appContractor h1{
+  .appContractor h1 {
     font-size: 2rem;
   }
 
