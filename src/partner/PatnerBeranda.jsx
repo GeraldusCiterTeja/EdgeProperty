@@ -5,7 +5,7 @@ function PartnerBeranda(){
     return(
         <div className="partnerBeranda">
             <h1>PARTNER</h1>
-            <img className="logoEdge" src="images/logo.svg"></img>
+            <img className="logoEdge" src="images/logo.svg" alt="LogoEdgeProperty"></img>
             <CardPartner />
         </div>
     )

@@ -14,8 +14,8 @@ function Modal3({ property, onClose }) {
         <button className="modal-close" onClick={onClose}>
           ×
         </button>
-        <img src="images/project3_Drone2SeaSide.jpg"></img>
-        <img className="logo" src="images/logo.svg"></img>
+        <img src="images/project3_Drone2SeaSide.jpg" alt="Shanata Seaside"></img>
+        <img className="logo" src="images/logo.svg" alt="Shanata Seaside"></img>
         <p className="deskripsi">
           <span>Shanata Seaside</span>  is a newly launched project located on the stunning Pasut Beach. With a development area of 19 are and offering 6 exclusive units, this beachfront property combines serene coastal living with exceptional investment potential.{" "}
         </p>
@@ -39,7 +39,7 @@ function Modal3({ property, onClose }) {
             <p><span>Unit:</span> 6 Units</p>
             <p><span>Started:</span> November 2024</p>
           </div>
-          <img src="images/logo.svg"></img>
+          <img src="images/logo.svg" alt="Logo EdgeProperty"></img>
         </div>
       </div>
     </div>

@@ -14,8 +14,8 @@ function Modal4({ property, onClose }) {
         <button className="modal-close" onClick={onClose}>
           ×
         </button>
-        <img src="images/project4_VillaRoyalBalangan.jpg"></img>
-        <img className="logo" src="images/logo.svg"></img>
+        <img src="images/project4_VillaRoyalBalangan.jpg" alt="Royal Balangan"></img>
+        <img className="logo" src="images/logo.svg" alt="Royal Balangan"></img>
         <p className="deskripsi">
           <span>Royal Balangan</span> is a luxurious villa project located in the scenic Balangan, Badung. The development spans 5 are and is divided into 3 exclusive villa units, offering a perfect blend of privacy, comfort, and breathtaking views, ideal for both investment and peaceful retreat.{" "}
         </p>
@@ -39,7 +39,7 @@ function Modal4({ property, onClose }) {
             <p><span>Unit:</span> 3 Units</p>
             <p><span>Started:</span> 2024</p>
           </div>
-          <img src="images/logo.svg"></img>
+          <img src="images/logo.svg" alt="Logo EdgeProperty"></img>
         </div>
       </div>
     </div>

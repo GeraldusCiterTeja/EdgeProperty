@@ -14,8 +14,8 @@ function Modal({ property, onClose }) {
         <button className="modal-close" onClick={onClose}>
           ×
         </button>
-        <img src="images/project1_Drone-1.jpg"></img>
-        <img className="logo" src="images/logo.svg"></img>
+        <img src="images/project1_Drone-1.jpg" alt="Shata Tanah Lot"></img>
+        <img className="logo" src="images/logo.svg" alt="Logo EdgeProperty"></img>
         <p className="deskripsi">
           <span>Shanata Tanah Lot</span> was launched in 2022, during the
           challenging times of the COVID-19 pandemic. The project spanned 28 are
@@ -43,7 +43,7 @@ function Modal({ property, onClose }) {
             <p>Unit: 30 Units</p>
             <p>Started: 2022</p>
           </div>
-          <img src="images/logo.svg"></img>
+          <img src="images/logo.svg" alt="Logo EdgeProperty"></img>
         </div>
       </div>
     </div>

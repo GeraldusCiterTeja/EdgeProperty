@@ -14,8 +14,8 @@ function Modal2({ property, onClose }) {
         <button className="modal-close" onClick={onClose}>
           ×
         </button>
-        <img src="images/project2_DroneTaman2.jpg"></img>
-        <img className="logo" src="images/logo.svg"></img>
+        <img src="images/project2_DroneTaman2.jpg"  alt="Taman Shanata"></img>
+        <img className="logo" src="images/logo.svg" alt="Taman Shanata"></img>
         <p className="deskripsi">
           <span>Taman Shanata was</span> developed following the sold-out success of Shanata Tanah Lot. Spanning 1.5 hectares, the project offers a total of 90 land plots, designed to meet diverse needs and provide exceptional investment opportunities.{" "}
         </p>
@@ -39,7 +39,7 @@ function Modal2({ property, onClose }) {
             <p><span>Unit:</span> 95 Units</p>
             <p><span>Started:</span> 2023</p>
           </div>
-          <img src="images/logo.svg"></img>
+          <img src="images/logo.svg" alt="Logo EdgeProperty"></img>
         </div>
       </div>
     </div>
