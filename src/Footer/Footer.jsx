@@ -13,7 +13,7 @@ function Footer(){
                 <FormFooter />
             </div>
             <Sosial />
-            <p>&copy; <a href="index.html">2024 EdgeProperty</a></p>
+            <p>&copy; <a href="#">2024 EdgeProperty</a></p>
         </footer>
     )
 };
